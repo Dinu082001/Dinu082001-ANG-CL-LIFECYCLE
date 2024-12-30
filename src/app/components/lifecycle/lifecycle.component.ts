@@ -18,6 +18,7 @@ export class LifecycleComponent implements OnInit {
    * good enough.
    */
   ngOnInit(): void {
+    this.time = dateTimestampProvider.now();
   }
 
   /**
@@ -25,7 +26,8 @@ export class LifecycleComponent implements OnInit {
    * unmounted
    * Here's a hint. You can cause an alert using the method alert("component destroyed!");
    */
-  ngOnDestroy() {
+  ngOnDestroy(): void {
+    alert('component destroyed!');
   }
 
 }
